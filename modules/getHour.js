@@ -3,6 +3,7 @@ export function getHour(time, offset){
     const timeConst = 7200 * 1000;
     
     const REALTIME = new Date(time + offset - timeConst);
+  
 
     let dateHour = REALTIME.getHours();
 

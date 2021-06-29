@@ -1,16 +1,16 @@
 import {HereMapKey} from "../main.js"
-import {UiSearchInput} from "../main.js"
+import {UiSearchInput} from "../main.js";
 import {fetchWeatherData} from "./fetchWeather.js"
 
-export async function getCoordinates(e){
+export async function getCoordinates(input){
 
 
-    if(e.target.classList.contains('cities-item')){
+   
 
     const autocompleteContainer = document.getElementById('places');
-    let place = e.target.textContent;
     
-    const res =  await fetch(`https://geocode.search.hereapi.com/v1/geocode?q=${place}&apiKey=${HereMapKey}`);
+    
+    const res =  await fetch(`https://geocode.search.hereapi.com/v1/geocode?q=${input}&apiKey=${HereMapKey}`);
     let data = await res.json();
     const location = new Object;
     
@@ -27,8 +27,6 @@ export async function getCoordinates(e){
     fetchWeatherData(location);
         
 
-    }else{
-        return;
-    }
+    
     
 }

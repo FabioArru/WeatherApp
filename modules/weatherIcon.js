@@ -1,42 +1,36 @@
-  export function weatherIcon(parent, weather){
+export function weatherIcon(element, weather) {
+  switch (weather) {
+    case "Thunderstorm":
+      element.src = "./img/temporale.png";
+      break;
 
-    
+    case "Drizzle":
 
-    const icon = document.createElement('img');
-    icon.id = "weather-icon";
+      element.src = "./img/pioggerella.png";
+      break;
 
-        switch(weather){
-            case "Thunderstorm":
-                icon.src = "./img/temporale.png"
-                
-                break;
-            case "Drizzle":
-                
-                icon.src = "./img/pioggerella.png"
-                break;
-            case "Rain":
-                
-                icon.src = "./img/pioggia.png"
-                break;
-            case "Snow":
-                
-                icon.src = "./img/neve.png"
-                break;
-            case "Mist":
-                
-                 icon.src = "./img/nebbia.png"
-                break;
-            case "Clouds":
-                
-                icon.src = "./img/nuvoloso.png"
-                break;
-            case "Clear":
-                
-                icon.src = "./img/sereno.png"
-                break;
+    case "Rain":
 
-        }
+      element.src = "./img/pioggia.png";
+      break;
 
-    parent.appendChild(icon);
+    case "Snow":
 
-  } 
+      element.src = "./img/neve.png";
+      break;
+
+    case "Mist":
+
+      element.src = "./img/nebbia.png";
+      break;
+
+    case "Clouds":
+        
+      element.src = "./img/nuvoloso.png";
+      break;
+
+    case "Clear":
+      element.src = "./img/sereno.png";
+      break;
+  }
+}

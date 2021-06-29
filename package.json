@@ -1,7 +1,7 @@
 {
-  "name": "current-weather",
+  "name": "weather-app",
   "version": "0.1.0",
-  "description": "frontend weather app project",
+  "description": "a frontend weather web app project",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,10 @@
   },
   "keywords": [
     "weather",
-    "javascript",
-    "current",
-    "weather",
-    "frontend"
+    "web",
+    "app",
+    "javascipt",
+    "openWeather"
   ],
   "author": "Fabio Arru",
   "license": "MIT",
